@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--------
+Author: Nathanael Tekalign
+Date: Feburary 18th, 2024
+Purpose: this program calculates taxes
+-->
+    <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link href="./Csslong.css" rel="stylesheet" />
+</head>
+<body>
+    <p>Welcome to the tax calculator</p>
+    <form id="form1_1">
+        <p>Please select your tax filing status:</p>
+        <label for="M1_1">Married filing jointly</label>
+        &nbsp;&nbsp;<input type="radio" id="M1_1" name="filing_status" value="M1_1" /><br><br>
+        <label for="M1_2">Married filing seperately</label>
+        &nbsp;&nbsp;<input type="radio" id="M1_2" name="filing_status" value="M1_2" /><br><br>
+        <label for="C1_1">Qualifing widow or widower</label>
+        &nbsp;&nbsp;<input type="radio" id="C1_1" name="filing_status" value="C1_1" /><br><br>
+        <label for="C1_2">Head of Household</label>
+        &nbsp;&nbsp;<input type="radio" id="C1_2" name="filing_status" value="C1_2" /><br><br>
+        <label for="C1_3">Single</label>
+        &nbsp;&nbsp;<input type="radio" id="C1_3" name="filing_status" value="C1_3" checked /><br><br>
+    </form>
+    <label for="pretaxincome">Enter pre-tax income :</label>
+    <input type="number" id="pretaxIncomeBox" name="pretaxIncomeBox" min="600" max="999999" value="600" />
+    <input type="button" id="tax_liabilityButton" value="tax_liabilityButton" onclick="calculate()"> </input>
+    <label for="tax_liability_1"></label>
+    <div id="output">where output goes!</div>
+    <script src="./unit1.js"></script>
+</body>
+</html>
+<!--     4.	Single Taxpayers:
+// a.	10%: Income from $0 to $11,000
+// b.	12%: Income from $11,001 to $44,725
+// c.	22%: Income from $44,726 to $95,375
+// d.	24%: Income from $95,376 to $182,100
+// e.	32%: Income from $182,101 to $231,250
+// f.	35%: Income from $231,251 to $578,125
+// g.	37%: Income of $578,126 and above
+//      5.	Married Filing Jointly or Qualifying Surviving Spouse:
+// a.	10%: Income from $0 to $22,000
+// b.	12%: Income from $22,001 to $89,450
+// c.	22%: Income from $89,451 to $190,750
+// d.	24%: Income from $190,751 to $364,200
+// e.	32%: Income from $364,201 to $462,500
+// f.	35%: Income from $462,501 to $693,750
+// g.	37%: Income of $693,751 and above
+//      6.	Married Filing Separately:
+// a.	10%: Income from $0 to $11,000
+// b.	12%: Income from $11,001 to $44,725
+// c.	22%: Income from $44,726 to $95,375
+// d.	24%: Income from $95,376 to $182,100
+// e.	32%: Income from $182,101 to $231,250
+// f.	35%: Income from $231,251 to $346,875
+// g.	37%: Income of $346,876 and above
+//      7.	Head of Household:
+// a.	10%: Income from $0 to $15,700
+// b.	12%: Income from $15,701 to $59,850
+// c.	22%: Income from $59,851 to $95,350
+// d.	24%: Income from $95,351 to $182,100
+// e.	32%: Income from $182,101 to $231,250
+// f.	35%: Income from $231,251 to $578,100
+// g.	37%: Income of $578,101 and above -->
